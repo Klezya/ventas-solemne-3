@@ -39,9 +39,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",  # Make sure you also have Django REST framework installed
     "api",  # Add this line to include your app
+    "corsheaders",
+
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -50,6 +53,10 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 ROOT_URLCONF = "ventas.urls"
 
@@ -129,7 +136,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ventas',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'Mati10.-',
         'HOST': 'localhost',
         'PORT': '3306',
     }
