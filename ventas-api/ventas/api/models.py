@@ -5,6 +5,7 @@ class Cliente(models.Model):
     nombre = models.CharField(max_length=100)
     apellido1 = models.CharField(max_length=100)
     apellido2 = models.CharField(max_length=100, null=True, blank=True)
+    nickname = models.CharField(max_length=100, null=True, blank=True)
     ciudad = models.CharField(max_length=100, null=True, blank=True)
     categoria = models.PositiveIntegerField(null=True, blank=True)
 
