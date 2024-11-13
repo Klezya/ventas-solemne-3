@@ -47,10 +47,16 @@ class ComercialLogin(APIView):
         try:
             # Busca el comercial por el nombre
             comercial = Comercial.objects.get(nombre=nombre)
+            comercial_data = {
+                    "id": comercial.id,
+                    "nombre": comercial.nombre,
+                    "apellido1": comercial.apellido1,
+                    "apellido2": comercial.apellido2
+                }
             
             # Verifica la contraseña
             if comercial.check_password(password):
-                return Response({"success": "Autenticación exitosa"}, status=status.HTTP_200_OK)
+                return Response({"success": "Autenticación exitosa","comercial": comercial_data}, status=status.HTTP_200_OK)
             else:
                 return Response({"error": "Contraseña incorrecta"}, status=status.HTTP_401_UNAUTHORIZED)
         
