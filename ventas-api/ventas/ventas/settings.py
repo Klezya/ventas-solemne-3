@@ -145,3 +145,16 @@ DATABASES = {
         'PORT': '6543',
     }
 }
+
+
+# Configuración SMTP para Gmail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "noreply.comprobanteapidjango@gmail.com"  # Cambia esto a tu dirección de Gmail
+EMAIL_HOST_PASSWORD = "2rUo%JFFm$WVX$tP"  # Cambia a tu contraseña o App Password si tienes 2FA activado
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # El remitente de los correos
+
+# Destinatario fijo para todas las confirmaciones
+CONFIRMATION_EMAIL_RECIPIENT = "vjestayvaldivia@gmail.com"  # Cambia a tu correo deseado
