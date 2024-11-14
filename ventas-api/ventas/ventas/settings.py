@@ -83,9 +83,13 @@ WSGI_APPLICATION = "ventas.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.xorfosumkeqjdwcvfjhv',
+        'PASSWORD': 'z68epwtmCtFeZPvI',
+        'HOST': 'aws-0-sa-east-1.pooler.supabase.com',
+        'PORT': '6543',
     }
 }
 
@@ -133,11 +137,24 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ventas',
-        'USER': 'root',
-        'PASSWORD': 'Mati10.-',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.xorfosumkeqjdwcvfjhv',
+        'PASSWORD': 'z68epwtmCtFeZPvI',
+        'HOST': 'aws-0-sa-east-1.pooler.supabase.com',
+        'PORT': '6543',
     }
 }
+
+
+# Configuración SMTP para Gmail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "noreply.comprobanteapidjango@gmail.com"  # Cambia esto a tu dirección de Gmail
+EMAIL_HOST_PASSWORD = "tatl fujc iegs amre"  # Cambia a tu contraseña o App Password si tienes 2FA activado
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # El remitente de los correos
+
+# Destinatario fijo para todas las confirmaciones
+CONFIRMATION_EMAIL_RECIPIENT = "vjestayvaldivia@gmail.com"  # Cambia a tu correo deseado
