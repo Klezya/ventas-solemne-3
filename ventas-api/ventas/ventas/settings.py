@@ -161,4 +161,4 @@ EMAIL_HOST_PASSWORD = "tatl fujc iegs amre"  # Cambia a tu contraseña o App Pas
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # El remitente de los correos
 
 # Destinatario fijo para todas las confirmaciones
-CONFIRMATION_EMAIL_RECIPIENT = "vjestayvaldivia@gmail.com"  # Cambia a tu correo deseado
+CONFIRMATION_EMAIL_RECIPIENT = "benjamin.nunez.beat@gmail.com"  # Cambia a tu correo deseado
