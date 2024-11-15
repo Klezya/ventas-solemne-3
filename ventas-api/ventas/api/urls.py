@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ClienteListCreate, ClienteRetrieveUpdateDestroy, ComercialListCreate, ComercialRetrieveUpdateDestroy, PedidoListCreate, PedidoRetrieveUpdateDestroy, ComercialLogin, get_comercial_id
+from .views import ClienteListCreate, ClienteRetrieveUpdateDestroy, ComercialListCreate, ComercialRetrieveUpdateDestroy, PedidoListCreate, PedidoRetrieveUpdateDestroy, ComercialLogin, PedidosPorComercialView, get_comercial_id
 
 urlpatterns = [
     path('clientes/', ClienteListCreate.as_view(), name='cliente-list-create'),
@@ -10,5 +10,5 @@ urlpatterns = [
     path('pedidos/<int:pk>/', PedidoRetrieveUpdateDestroy.as_view(), name='pedido-detail'),
     path('comercial/login/', ComercialLogin.as_view(), name='comercial-login'),
     path('get_comercial_id/', get_comercial_id, name='get_comercial_id'),
-
+    path('pedidos/comercial/<int:id_comercial>/', PedidosPorComercialView.as_view(), name='pedidos-por-comercial'),
 ]

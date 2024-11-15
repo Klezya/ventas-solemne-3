@@ -123,3 +123,12 @@ def get_comercial_id(request):
             return JsonResponse({'error': 'Nombre y contraseña son requeridos'}, status=400)
     else:
         return JsonResponse({'error': 'Método no permitido'}, status=405)
+
+class PedidosPorComercialView(generics.ListAPIView):
+    serializer_class = PedidoSerializer
+
+    def get_queryset(self):
+        id_comercial = self.kwargs['id_comercial']
+        return Pedido.objects.filter(comercial_id=id_comercial)
+
+
