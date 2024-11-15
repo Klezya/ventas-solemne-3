@@ -1,4 +1,23 @@
+<<<<<<< HEAD
 
 ventas-api/ventas/ventas/__pycache__/settings.cpython-312.pyc
 ventas-api/ventas/api/__pycache__/views.cpython-312.pyc
 ventas-api/ventas/api/__pycache__/urls.cpython-312.pyc
+=======
+# Python #
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Django #
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+db.sqlite3
+*.pyc
+.DS_Store
+>>>>>>> 99748e1e30d5f5b93946d771731001ee3c3cef7f
