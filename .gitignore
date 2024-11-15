@@ -21,3 +21,4 @@ db.sqlite3
 *.pyc
 .DS_Store
 >>>>>>> 99748e1e30d5f5b93946d771731001ee3c3cef7f
+ventas-api/ventas/ventas/__pycache__/settings.cpython-312.pyc
